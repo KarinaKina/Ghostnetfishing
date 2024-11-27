@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui" >
+	  
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Geisternetze bergen</title>
+	
+</head>
+
+<h:body>
+			 <h1>Shea Sepherd</h1>
+	
+			 <h:form>
+				<p>Bitte trage uns deinen Namen sowie deine Telefonnummer in folgendes Formular - damit wir dich für Rückfragen erreichen können.</p>
+
+	            <h:panelGrid columns="2">
+	                <h:outputText value="Name"></h:outputText>
+	                <h:inputText value="#{loginBean.name}"></h:inputText>
+	                
+			        <h:outputText value="Telefonnummer"></h:outputText>
+			        <h:inputSecret value="#{loginBean.telefon}"></h:inputSecret>
+
+	            </h:panelGrid>
+	            
+	            <h:commandButton value="Anmelden" actionListener="#{loginBean.netFisher()}"></h:commandButton>
+				<p>Hallo <h:outputText value=" #{loginBean.name}"></h:outputText>, schön dass du hier bist!</p>
+
+	         </h:form>
+
+          
+			 <div id="map">
+			 
+					<iframe width="100%" height="300px" frameborder="0" src="https://umap.openstreetmap.de/de/map/ghostnetfishing_64907"></iframe>
+			
+			 </div>	
+
+			<p>Um in der Karte eine Aktivität zu hinterlegen, klicken Sie bitte auf die Schaltfläche "Bearbeiten" direkt auf der Karte oder bearbeiten Sie in der Vollansicht mit folgendem Link: 
+			<a href="https://umap.openstreetmap.de/de/map/ghostnetfishing_64907?scaleControl=false&miniMap;=false&scrollWheelZoom;=false&zoomControl;=true&editMode;=disabled&moreControl;=true&searchControl;=null&tilelayersControl;=null&embedControl;=null&datalayersControl;=true&onLoadPanel;=none&captionBar;=false&captionMenus;=true">Zur Bearbeitung</a></p>
+
+			 <br></br>
+			
+			 <p>Bitte schreiben Sie in Ihre Markierung Ihren Nachnamen und das entsprechende Datum. Wählen Sie die richtige Ebene!</p>
+
+
+</h:body>
+</html>

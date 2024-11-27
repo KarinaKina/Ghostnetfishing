@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui"
+	  >
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Login-Seite</title>
+
+</head>
+
+<body>
+
+	<h1>Shea Sepherd - Auffindung von Geisternetzen</h1>
+
+	<p>Bitte logge dich mit deinem Nickname und deinem Passwort ein!</p>
+
+	<h:form>
+	
+	<h:panelGrid columns="2">
+	
+		<h:outputText value="Nickname"></h:outputText>
+		<h:inputText id="nickName" value="#{user.nickName}"></h:inputText>
+		
+		<h:outputText value="Passwort"></h:outputText>
+		<h:inputText id="passwort" value="#{user.passwort}"></h:inputText>
+		
+		<!-- <h:commandLink action="result.xhtml" value="Senden"></h:commandLink> -->
+	<h:commandButton action="#{user.speichereUser()}"
+			value="Login"></h:commandButton>
+	  
+	</h:panelGrid>
+	
+	</h:form>
+
+
+</body>
+
+</html>
